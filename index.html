@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>奥尔夫手机首页</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+       <!--  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" /> -->
+        <link rel="icon" type="image/png" href="/theme/default/images/favicon.png">
+		<link href="css/amazeui.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+		<script src="js/jquery-1.10.2.min.js"></script>
+
+   
+		<script src="js/time.js"></script>
+		<script>
+                    $(function () {
+                        var elm = $('#shortbar');
+                        var startPos = $(elm).offset().top;
+                        $.event.add(window, "scroll", function () {
+                            var p = $(window).scrollTop();
+                            if (p > startPos) {
+                                elm.addClass('sortbar-fixed');
+                            } else {
+                                elm.removeClass('sortbar-fixed');
+                            }
+                        });
+                    });
+
+        $(document).ready(function(){
+             $("#scrollDiv").Scroll({line:1,speed:500,timer:3000,up:"but_up",down:"but_down"});
+        });
+		</script>
+
+
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('.inactive').click(function(){
+      if($(this).siblings('ul').css('display')=='none'){
+        $(this).parent('li').siblings('li').removeClass('inactives');
+        $(this).addClass('inactives');
+        $(this).siblings('ul').slideDown(100).children('li');
+        if($(this).parents('li').siblings('li').children('ul').css('display')=='block'){
+          $(this).parents('li').siblings('li').children('ul').parent('li').children('a').removeClass('inactives');
+          $(this).parents('li').siblings('li').children('ul').slideUp(100);
+
+        }
+      }else{
+        //控制自身变成+号
+        $(this).removeClass('inactives');
+        //控制自身菜单下子菜单隐藏
+        $(this).siblings('ul').slideUp(100);
+        //控制自身子菜单变成+号
+        $(this).siblings('ul').children('li').children('ul').parent('li').children('a').addClass('inactives');
+        //控制自身菜单下子菜单隐藏
+        $(this).siblings('ul').children('li').children('ul').slideUp(100);
+
+        //控制同级菜单只保持一个是展开的（-号显示）
+        $(this).siblings('ul').children('li').children('a').removeClass('inactives');
+      }
+    })
+  });
+  </script>
+   
+	</head>
+	<body>
+<!--图片轮换-->
+<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0" style="position: relative;">
+	<header data-am-widget="header" class="am-header am-header-default tm-head" id="shortbar" >
+			<div class="am-header-left am-header-nav">
+		        <img src="images/fuhao.png" />
+		   </div>
+			<h1 class="am-header-title1">
+		        <div class="search-box">
+		    
+                    <h1 style="font-weight:bold; font-size: 16px; ">中国奥尔夫音乐教育数字化平台</h1>
+		        </div>
+		    </h1>
+			<div class="am-header-right am-header-nav">
+			    
+			    <div class="ann_ao">
+		           <img src="images/index.png" />
+		       
+		        </div>
+			</div>
+
+<script type="text/javascript">
+ $(function(){
+    $('.ann_ao').click(function(){//点击a标签
+    if($('.xiala_ao').is(':hidden')){//如果当前隐藏
+    $('.xiala_ao').show();//那么就显示div
+    }else{//否则
+    $('.xiala_ao').hide();//就隐藏div
+    }
+    })
+})
+</script>
+
+      <div class="xiala_ao" >
+        <div class="ponav_ao">
+           <div class="list">
+    <ul class="yiji">
+      <li style="margin-left:-10px;"><a href="#">首页</a></li>
+      <li><a href="#" class="inactive">关于我们</a>
+        <ul style="display: none">
+          <li><a href="#" class="active">教育理念</a></li>
+          <li><a href="about.html" class="active">平台简介</a></li>
+          <li><a href="#" class="active">荣誉证书</a></li>  
+          <li><a href="#" class="active">师资力量</a></li>  
+        </ul>
+      </li>
+
+
+       <li><a href="#" class="inactive">奥尔夫音乐教育简介 </a>
+        <ul style="display: block">
+          <li><a href="#" class="active">奥尔夫语录</a></li>
+          <li><a href="#" class="active">奥尔夫在中国</a></li> 
+          <li><a href="#" class="active">奥尔夫乐器</a></li>
+          <li><a href="#" class="active">卡尔奥尔夫的一生</a></li> 
+          <li><a href="#" class="active">奥尔夫音乐教育原理</a></li> 
+        </ul>
+      </li>
+
+
+      <li><a href="#" class="inactive">最新动态 </a>
+        <ul style="display: none">
+          <li><a href="#" class=" active">新闻中心</a></li> 
+          <li><a href="#" class=" active">行业动态</a></li>   
+        </ul>
+      </li>
+
+      <li><a href="#" class="inactive">课程培训</a>
+        <ul style="display: none">
+          <li><a href="#" class=" active">短期班</a></li> 
+          <li><a href="#" class=" active">长期班</a></li>   
+          <li class="last"><a href="#">网络众筹班</a></li> 
+        </ul>
+      </li>
+
+
+
+      <li><a href="#" class="inactive">联系我们</a>
+        <ul style="display: none">
+          <li><a href="#" class=" active">中心地理位置</a></li> 
+          <li><a href="#" class=" active">在线留言</a></li>   
+        </ul>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+
+
+
+
+
+        </header>
+    <ul class="am-slides">
+    <li><img src="images/index1.jpg" /></li>
+    <li><img src="images/index1.jpg" /></li>
+  </ul>
+</div>
+<!--导航-->
+
+
+
+
+<div class="ao_xqiu">
+  <h2>手机拍照 一键下单<p>奥尔夫<!-- 教学为您提供 -->所需的各项资源解决方案</p></h2>
+  <a href="#"><span>提交我的需求</span></a>
+</div>
+
+
+
+
+
+ <div class="whitebar">
+      <div data-am-widget="tabs" class="am-tabs am-tabs-d2">
+            <ul class="am-tabs-nav am-cf">
+                <li class="am-active" ><a href="[data-tab-panel-0]" style="color: #12b5e0; "><i class="pr"><img src="images/tu1.png" ></i>短期班</a></li>
+                <li class=""><a href="[data-tab-panel-1]" style="color: #f56108; "><i class="pr"><img src="images/tu2.png" ></i>长期班</a></li>
+                <li class=""><a href="[data-tab-panel-2]" style="color: #e84c42; "><i class="pr"><img src="images/tu3.png" ></i>网络众筹班</a></li>
+            </ul>
+          
+            <div class="am-tabs-bd">
+                <div data-tab-panel-0 class="am-tab-panel am-active">
+                          <ul class="yule">
+              <li>
+                <a href="about.html">
+                  <div class="plk_img"><img src="images/tu4.jpg"></div>
+
+                  <div style="width: 70%; float: left;">
+                  <h3 class="title">中国音乐家协会奥尔夫专业委员会2016暑期奥尔夫教育Orff-Schulwerk)教师资格证课程</h3>
+                  <p class="intro"><img src="images/tu6.jpg" width="6%">开课时间：<span style="color:#ea5504">2016-11-25/2016-11-28</span></p>
+              
+                  </div>
+                </a>
+              </li>
+
+             </ul>
+                </div>
+
+
+                <div data-tab-panel-1 class="am-tab-panel ">
+                     <ul class="yule">
+              <li>
+                 <a href="about.html">
+                  <div class="plk_img"><img src="images/tu4.jpg"></div>
+
+                  <div style="width: 70%; float: left;">
+                  <h3 class="title">中国音乐家协会奥尔夫专业委员会2016暑期奥尔夫教育Orff-Schulwerk)教师资格证课程</h3>
+                  <p class="intro"><img src="images/tu6.jpg" width="6%">开课时间：<span style="color:#ea5504">2016-11-25/2016-11-28</span></p>
+              
+                  </div>
+                </a>
+              </li>
+
+             
+             </ul>
+                </div>
+
+
+
+                <div data-tab-panel-2 class="am-tab-panel ">
+                     <ul class="yule">
+              <li>
+                <a href="about.html">
+                  <div class="plk_img"><img src="images/tu4.jpg"></div>
+
+                  <div style="width: 70%; float: left;">
+                  <h3 class="title">中国音乐家协会奥尔夫专业委员会2016暑期奥尔夫教育Orff-Schulwerk)教师资格证课程</h3>
+                  <p class="intro"><img src="images/tu6.jpg" width="6%">开课时间：<span style="color:#ea5504">2016-11-25/2016-11-28</span></p>
+              
+                  </div>
+                </a>
+              </li>
+
+             
+             </ul>
+                </div>
+            </div>
+        </div>
+     </div>
+    
+
+<div class="xian_oy"></div>
+
+
+
+ <!-- 卷带专区-->
+  <div class="sq-titlea ">
+     
+     <div class="news_ao"><img src="images/xw.jpg" width="60%"></div>
+     <div class="scrollbox">
+     <div id="scrollDiv" class="news_aoli" >
+       <ul>
+         <li><i></i><a href="about.html">2016学前教育发展大会在广州举行~</a></li>
+         <li><i></i><a href="about.html">中国早教论坛第七届年会在渝隆重召开~</a></li>
+          <li><i></i><a href="about.html">2016学前教育发展大会在广州举行~</a></li>
+         <li><i></i><a href="about.html">中国早教论坛第七届年会在渝隆重召开~</a></li>
+       </ul>
+     </div>
+     </div>
+ </div>
+
+
+<div class="about_ao">
+  <div class="about_textao">
+    <h4>关于我们</h4>
+    <p>中国奥尔夫音乐教育数字化平台由中国音乐家协会奥尔夫专业委员会广东中心发起，平台旨在通过网络方式，尽可能提供奥尔夫教学所需的各项资源，并通过PC端、手机端及云端提供交互式的教学指导，最大限度的配合线下教育的广泛开展，提供完善的教育服务。</p>
+  </div>
+</div>
+
+
+
+<div class="shiz_ao">
+    <h3>师资力量</h3>
+</div>
+
+<div class="jup_a">
+  <div class="shiz_aoli">
+      <ul>
+          <li><i><img src="images/tu4.jpg"></i><p>朱晖教师</p></li>
+          <li><i><img src="images/tu4.jpg"></i><p>曾群教师</p></li>
+          <li><i><img src="images/tu4.jpg"></i><p>李奕教师</p></li>
+      </ul>
+  </div>
+</div>
+
+<div style="clear: both;"></div>
+
+
+<div class="hezuo_a">
+    <h4>合作伙伴</h4>
+</div>
+
+<div class="hezuo_ao">
+  <ul>
+    <li>中国奥尔夫音乐教育数字</li>
+    <li>中国音协奥尔夫广东中心</li>
+    <li>中国奥尔夫音乐教育数字</li>
+    <li>中国音协奥尔夫广东中心</li>
+  </ul>
+</div>
+
+<div style="clear: both;"></div>
+
+<div style="height: 5px; background: #f4f4f4; margin-top: 15px;  margin-bottom: 15px;"></div>
+
+<div class="banq_ao">
+  <ul>
+      <li>关于</li>
+      <li>联系</li>
+      <li>帮助</li>
+  </ul>
+  </div>
+
+<div class="banq">
+
+  <div style="clear: both;"></div>
+    <p>Copyright© 2016 奥尔夫教育培训有限公司  版权所有<br/>
+        <span>技术支持 新麦网络</span></p>
+
+</div>
+
+
+
+
+ <!--底部-->
+ <div style="height: 55px;"></div>
+ <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default sq-foot am-no-layout" id="">
+      <ul class="am-navbar-nav am-cf am-avg-sm-4">   
+          <li>
+            <a href="index.html" class="curr">
+              <img src="images/sye.png">
+                <span class="am-navbar-label">主页</span>
+            </a>
+          </li>
+
+          <li>
+              <a href="javascript:" class=" ">
+                   <img src="images/kec.png">
+                  <span class="am-navbar-label">课程</span>
+              </a>
+          </li>
+
+          <li>
+            <a href="login.html" class="">
+                
+                <img src="images/xiaox.png">
+                <span class="am-navbar-label">消息</span>
+            </a>
+          </li>
+       
+
+         <li>
+            <a href="login.html" class="">
+                <img src="images/wode.png">
+                <span class="am-navbar-label">我的</span>
+            </a>
+          </li>
+       
+         
+      </ul>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+ <script src="js/jq_scroll.js" type="text/javascript"></script>
+
+
+	</body>
+</html>
